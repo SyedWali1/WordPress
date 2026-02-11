@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    
+
     stages {
 
 
@@ -9,7 +9,12 @@ pipeline {
         stage('Deploy wp-content') {
             steps {
                 sh '''
+                echo "Deploying wp-content..."
+
+                # Remove old content safely
                 rm -rf /var/www/html/wp-content/*
+
+                # Copy new content from repo
                 cp -r wp-content/* /var/www/html/wp-content/
                 '''
             }
@@ -18,11 +23,14 @@ pipeline {
         stage('Fix Permissions') {
             steps {
                 sh '''
-                sudo chown -R www-data:www-data /var/www/html/wp-content
-                sudo chmod -R 755 /var/www/html/wp-content
+                echo "Fixing permissions..."
+
+                chown -R www-data:www-data /var/www/html/wp-content
+                chmod -R 755 /var/www/html/wp-content
                 '''
             }
         }
     }
 }
+
 
