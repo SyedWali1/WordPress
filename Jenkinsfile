@@ -4,13 +4,7 @@ pipeline {
     
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'vm-ssh-key',
-                    url: 'git@github.com:SyedWali1/WordPress.git'
-            }
-        }
+
 
         stage('Deploy wp-content') {
             steps {
