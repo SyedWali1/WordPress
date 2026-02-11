@@ -3,7 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Deplooy wp-content') {
+        stage('Deploy wp-content') {
             steps {
                 sh '''
                 echo "Deploying wp-content..."
