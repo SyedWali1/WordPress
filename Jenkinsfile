@@ -9,7 +9,7 @@ pipeline {
         stage('Deploy wp-content') {
             steps {
                 sh '''
-                sudo rsync -av --delete wp-content/ /var/www/html/wp-content/
+                rsync -av --delete wp-content/ /var/www/html/wp-content/
                 '''
             }
         }
