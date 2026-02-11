@@ -1,0 +1,23 @@
+# Ignore WordPress Core
+wp-admin/
+wp-includes/
+index.php
+license.txt
+readme.html
+xmlrpc.php
+wp-*.php
+
+# Ignore config file
+wp-config.php
+
+# Ignore uploads (user data)
+wp-content/uploads/
+
+# Ignore cache
+wp-content/cache/
+
+# Ignore logs
+*.log
+
+# OS files
+.DS_Store
