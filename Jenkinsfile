@@ -1,19 +1,19 @@
-pipeline {
-    agent any
+// pipeline {
+//     agent any
 
-    stages {
+//     stages {
 
-        stage('Deploy wp-content') {
-            steps {
-                sh '''
-                echo "Deploying wp-content..."
-                rm -rf /var/www/html/wp-content/*
-                cp -r wp-content/* /var/www/html/wp-content/
-                '''
-            }
-        }
-    }
-}
+//         stage('Deploy wp-content') {
+//             steps {
+//                 sh '''
+//                 echo "Deploying wp-content..."
+//                 rm -rf /var/www/html/wp-content/*
+//                 cp -r wp-content/* /var/www/html/wp-content/
+//                 '''
+//             }
+//         }
+//     }
+// }
 
 
 
